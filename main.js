@@ -14,7 +14,6 @@ button.addEventListener("click", () => {
       timeLeft--;
       timeDisplay.textContent = timeLeft;
 
-      // 残り時間が少ないと色を変える
       if (timeLeft <= 3) {
         timeDisplay.style.color = "#ff4444";
       }
@@ -33,7 +32,6 @@ button.addEventListener("click", () => {
     count++;
     countDisplay.textContent = count;
 
-    // アニメーション追加
     countDisplay.classList.remove("pulse");
     void countDisplay.offsetWidth;
     countDisplay.classList.add("pulse");
@@ -42,7 +40,7 @@ button.addEventListener("click", () => {
 
 function showConfetti() {
   const body = document.body;
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 80; i++) {
     const dot = document.createElement("div");
     dot.style.position = "fixed";
     dot.style.width = "10px";
