@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>クリック速度ゲーム</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      background: #f0f8ff;
+      padding: 50px;
+    }
+    button {
+      font-size: 24px;
+      padding: 20px 40px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #info {
+      margin-top: 30px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>💥 クリック速度ゲーム</h1>
+  <p>10秒以内に何回クリックできるかチャレンジ！</p>
+  <button id="clickButton">ここをクリック！</button>
+  <div id="info">クリック回数: <span id="count">0</span></div>
+  <div id="timer">残り時間: <span id="time">10</span>秒</div>
+
+  <!-- JavaScript読み込み -->
+  <script src="main.js"></script>
+</body>
+</html>
