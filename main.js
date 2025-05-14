@@ -14,7 +14,7 @@ button.addEventListener("click", () => {
       timeLeft--;
       timeDisplay.textContent = timeLeft;
 
-      // 🔥 緊張感！残り3秒で色が赤に変わる
+      // 残り時間が少ないと色を変える
       if (timeLeft <= 3) {
         timeDisplay.style.color = "#ff4444";
       }
@@ -24,7 +24,7 @@ button.addEventListener("click", () => {
         button.disabled = true;
         button.textContent = "終了！";
         document.getElementById("info").classList.add("end-effect");
-        showConfetti(); // 🎊
+        showConfetti();
       }
     }, 1000);
   }
@@ -33,9 +33,9 @@ button.addEventListener("click", () => {
     count++;
     countDisplay.textContent = count;
 
-    // 🎉 アニメーション
+    // アニメーション追加
     countDisplay.classList.remove("pulse");
-    void countDisplay.offsetWidth; // 再実行のトリック
+    void countDisplay.offsetWidth;
     countDisplay.classList.add("pulse");
   }
 });
