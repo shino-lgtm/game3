@@ -12,7 +12,20 @@
   <p>クリック数: <span id="count">0</span></p>
   <p>残り時間: <span id="timer">10</span>秒</p>
 
-  <!-- 🎵 BGMの設定（自動再生がブロックされても1回目のクリックで再生） -->
+  <!-- 🎵 BGMをaudioタグで定義 -->
+  <audio id="bgm" src="audio/bgm.mp3" loop></audio>
+
+  <!-- ✅ JSは最後に読み込む -->
+  <script src="main.js"></script>
+
+  <!-- ✅ BGM再生（クリックで1回だけ再生） -->
   <script>
-    const bgm = new Audio('audio/bgm.mp3');
-    bgm.loop = true;
+    window.addEventListener('DOMContentLoaded', () => {
+      const bgm = document.getElementById('bgm');
+      document.body.addEventListener('click', () => {
+        bgm.play();
+      }, { once: true });
+    });
+  </script>
+</body>
+</html>
