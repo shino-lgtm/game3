@@ -11,6 +11,8 @@
   <button id="clickButton">クリック！</button>
   <p>クリック数: <span id="count">0</span></p>
   <p>残り時間: <span id="timer">10</span>秒</p>
-  <script src="main.js"></script>
-</body>
-</html>
+
+  <!-- 🎵 BGMの設定（自動再生がブロックされても1回目のクリックで再生） -->
+  <script>
+    const bgm = new Audio('audio/bgm.mp3');
+    bgm.loop = true;
